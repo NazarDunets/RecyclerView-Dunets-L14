@@ -56,7 +56,7 @@ class Person(
         val result = mutableListOf(Pair(this, n))
         mother?.also { result.addAll(it.simpleListLeveledTree(n + 1)) }
         father?.also { result.addAll(it.simpleListLeveledTree(n + 1)) }
-        return result.sortedBy { item -> item.second }
+        return result
     }
 
     /**

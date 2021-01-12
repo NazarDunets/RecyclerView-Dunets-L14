@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val me = PeopleGenerator().getMe()
         val density = this.resources.displayMetrics.density
         binding.rvMain.run {
-            adapter = FamilyAdapter(me.listLeveledTree(), density)
+            adapter = FamilyAdapter(me.simpleListLeveledTree(), density)
             layoutManager = LinearLayoutManager(this@MainActivity)
             addItemDecoration(
                 DividerItemDecoration(this@MainActivity, RecyclerView.VERTICAL)
